@@ -21,3 +21,12 @@ o1.o_shippriority = d.o_shippriority
 and o1.o_orderstatus = d.o_orderstatus
 and o1.o_totalprice < d.a
 ```
+
+## 5.3
+
+### code 1:
+```sql
+select s.name, s.semester, avg(t.grade) from test t, students s
+where t.studnr = s.studnr
+GROUP BY s.studnr, s.name, s.semester
+```
